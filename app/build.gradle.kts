@@ -7,9 +7,7 @@ plugins {
 android {
     namespace = "com.example.myapplication9"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
@@ -44,6 +42,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
@@ -53,6 +52,7 @@ dependencies {
     implementation(libs.compose.icons)
     //room
     implementation(libs.bundles.room)
+    implementation(libs.protolite.well.known.types)
     ksp(libs.room.compiler)
     //viewmodel
     implementation(libs.lifecycle.viewmodel.compose)
