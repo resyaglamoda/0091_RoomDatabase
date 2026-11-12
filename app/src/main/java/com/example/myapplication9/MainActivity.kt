@@ -14,3 +14,17 @@ import com.example.myapplication9.ui.theme.MyApplication9Theme
 import com.example.myapplication9.uicontroller.SiswaApp
 import com.example.myapplication9.viewmodel.PenyediaViewModel
 
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            MyApplication9Theme {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    // Memanggil SiswaApp untuk navigasi
+                    SiswaApp()
+                }
+            }
+        }
+    }
+}
